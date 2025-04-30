@@ -7,7 +7,7 @@
                     credentialsId: 'spmyregistry',
                     usernameVariable: 'ACR_USERNAME',
                     passwordVariable: 'ACR_PASSWORD'
-                )])
+                )]){
                      script {
                          sh ''' 
                               echo $ACR_PASSWORD | docker login myregistry03.azurecr.io -u $ACR_USERNAME --password-stdin
@@ -15,6 +15,7 @@
                            '''   
                      }
                  }
+                 }       
              }
          }
      }

@@ -18,5 +18,12 @@
                  }
                  }       
              }
+               stage('Deploy') {
+                    steps {
+                        script {
+                            sh "kubectl apply -f ./service.yaml"
+                        }
+                    }
+
          }
      }

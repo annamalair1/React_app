@@ -15,7 +15,7 @@
                           docker.build("myregistry03.azurecr.io/java-app:${env.BUILD_NUMBER}")
                           bat """
                               echo %ACR_PASSWORD% | docker login myregistry03.azurecr.io -u %ACR_USERNAME% --password-stdin
-                              docker push myregistry03.azurecr.io/java-app:${env.BUILD_NUMBER}
+                              docker push myregistry03.azurecr.io/java-app:latest
                           """
                      }
                  }

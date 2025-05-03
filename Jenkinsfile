@@ -2,6 +2,7 @@
          agent any
          environment {
          KUBECONFIG = 'kubeconfig'
+         }
          stages {
              stage('Build') {
                  steps {

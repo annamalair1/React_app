@@ -12,7 +12,8 @@
 # CMD ["http-server", "-p", "3000", "./build"]
 
 # Use an appropriate Node.js base image
-FROM node:alpine
+# FROM node:alpine
+FROM --platform=linux/amd64 node:18-alpine
 
 # Set the working directory inside the container
 WORKDIR /app

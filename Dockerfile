@@ -13,19 +13,28 @@
 
 # Use an appropriate Node.js base image
 # FROM node:alpine
-FROM --platform=linux/amd64 node:18-alpine
+
+
+#FROM --platform=linux/amd64 node:18-alpine
 
 # Set the working directory inside the container
-WORKDIR /app
+#WORKDIR /app
 
 # Copy package.json and package-lock.json to install dependencies
-COPY package*.json ./
+#COPY package*.json ./
 
 # Install dependencies
-RUN npm install -g npm@10.2.5
+#RUN npm install -g npm@10.2.5
 
 # Copy the rest of the application files
-COPY . .
+#COPY . .
 
 # Set the command to start the React app
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+
+
+# Use a minimal base image, such as Alpine Linux
+FROM alpine:latest
+
+# Set the command to print "Hello"
+CMD echo "Hello"

@@ -25,7 +25,7 @@
                     steps {
                         withCredentials([file(credentialsId: 'aks-kubeconfig', variable: 'kubeconfig')]){ 
                         script {
-                            sh "kubectl apply -f ./service.yaml"
+                            sh "kubectl apply -f service.yaml"
                         }}
                     }
                }

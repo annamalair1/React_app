@@ -33,8 +33,5 @@
 #CMD ["npm", "start"]
 
 
-# Use a minimal base image, such as Alpine Linux
 FROM alpine:latest
-
-# Set the command to print "Hello"
-CMD echo "Hello"
+CMD ["echo", "Hello"]

@@ -26,7 +26,7 @@
                         withCredentials([file(credentialsId: 'aks-kubeconfig', variable: 'kubeconfig')]){ 
                         script {
                             bat """
-                            kubectl apply -f service.yaml
+                            kubectl apply -f manifest/service.yaml
                             """
                         }}
                     }

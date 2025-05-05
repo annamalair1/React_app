@@ -24,10 +24,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install -g npm@10.2.5
+RUN npm install -g npm@10.2.5 && npm install
 
 # Copy the rest of the application files
 COPY . .
+
+# Expose port (React default)
+EXPOSE 3000
 
 # Set the command to start the React app
 CMD ["npm", "start"]

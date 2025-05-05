@@ -12,10 +12,10 @@
                     passwordVariable: 'ACR_PASSWORD'
                 )]){
                      script {
-                          docker.build("myregistry03.azurecr.io/java-app:27", "--platform linux/arm64 .")
+                          docker.build("myregistry03.azurecr.io/java-app:28")
                           bat """
                               echo %ACR_PASSWORD% | docker login myregistry03.azurecr.io -u %ACR_USERNAME% --password-stdin
-                              docker push myregistry03.azurecr.io/java-app:27
+                              docker push myregistry03.azurecr.io/java-app:28
                           """
                      }
                  }

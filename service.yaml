@@ -18,7 +18,7 @@ spec:
       - name: java-app
         image: myregistry03.azurecr.io/java-app:28
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
 
 ---
 
@@ -32,5 +32,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 3000
   type: LoadBalancer
